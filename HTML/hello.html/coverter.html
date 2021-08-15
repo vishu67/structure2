@@ -1,0 +1,37 @@
+<!doctype html>
+\<html>
+    <head>
+        <title>fahrenheit to celcius temperature converter</title>
+    
+    <style>
+        body{
+            background-color:rgba(255,99,71,0.5);
+        }
+        input{
+            background-color:rgba(255,99,71,0.5);
+        }
+    </style>
+    </head>
+    <body>
+
+        <h2>temperature converter</h2>
+        <p>
+            type a value in the farhenheit field to convert the value to celcius
+        </p>
+        <p>
+            <label>farhenheit</label>
+            <inputid-"inputfarhenheit"type-"number"placeholder-"farhenheit" oninput="temperatureconverter(this.value)"
+            onchange="temperatureconverter(this.value)"></p>
+           
+    
+        <p>
+            celcius:<span id="outputcelcius"></span>
+        </p>
+        <script>
+            function temperatureconverter(valnum){
+                valnum =parsefloat(valnum);
+                document.getelementbyid("outputcelcius").innerHTML=(valnum -32)/1.8;
+            }
+        </script>
+    </body>
+</html>

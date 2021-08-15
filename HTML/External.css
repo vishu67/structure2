@@ -1,0 +1,23 @@
+*{
+    background-color: indigo;
+    font-size: 50px;
+}
+.one{
+    background-color: orange;
+    font-size: larger;
+    color:#ffffff
+}
+.two{
+    background-color: green;
+    font-size: medium;
+}
+#vy{
+    background-color: cyan;
+    font-size: larger;
+    color:black
+}
+.three{
+    background-color: red;
+    font-size: medium;
+    
+}
