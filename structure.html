@@ -581,6 +581,221 @@
 
                 </p>
             </form>
+ <form action="http//www.example.com/profile.php">
+                    <p>
+                        what device do you listen to music on?
+                    </p>
+                    <select Name="devices"><!--the name attribute indicates the name of the form control beingsent to the server 
+                    ,along with the value the user selected.-->
+                        <option value="ipod">ipod</option><!--the<option> Element is used to specify the options that the user
+                            can select from.--><!--value attribute:- the <option> element uses the value attribute to indicate 
+                                the value that is sent to the server along with the name of the control if this option is selected.-->
+                        <option value="radio">Radio</option>
+                        <option value="computer">computer</option>
+                    </select><!--A drop down list box(also known as a Select box) allows user to select one option from a drop down list.-->
+            </form>
+            <hr />
+            <br>
+            <form action="http//www.welcome.com/profile.php">
+                <p>
+                    do you play any of the following instrument?
+                    (you can select more than option by holding down control on a pc or command key on a mac while selecting different 
+                    options.)
+                </p>
+                <select name="Instruments" size="3"
+                multiple="multiple"><!--multiple:- you can allow users to select multiple options from this list by adding the multiple 
+                attribute with a value of multiple.--><!--size:- you can turn a drop down select box that shows more than one option 
+                by adding the size attribute.-->
+                <option value="Guitar" selected="selected">Guitar></option>
+                <option value="Drums" selected="selected">Drums</option>
+                <option value="Keyboard" selected="selected">Keyboard</option>
+                <option value="Bass" selected="selected">Bass</option>
+            </select>
+              </form>
+              <hr />
+              <br>
+              <hr />
+              <br>
+              <form action="http//www.example.com/upload.php" method="post">
+                <p>upload your song in mp3 format:</p>
+                <input type="file" name="user-song" /><br /><!--<input>:- if you want to allow users to upload a file (for example 
+                    an image,videos,mp3,or a pdf). you will need to use a file input box.-->
+                <input type="submit" value="upload" /><!--type="file":- this type of input creates a box that looks like a text
+                input followed by a browse button.-->
+            </form>
+            <hr />
+            <br />
+            <form action="http//www.example.com/subscribe.php">
+                <p>
+                    subscribe to our email list:
+                </p> 
+                <input type="text" name="email" /><!--type="submit":- The submit button is used to send a form to the server-->
+                <input type="submit" name="subscribe" value="subscribe" /><!--the value attribute is used to control the text
+                that appears on a button.it is a good idea to specify the words you want to appear on a button because the default 
+            value of button is 'submit query'and this might not be appropriate for all kinds of form.  -->
+            </form>
+            <hr />
+            <br />
+            <form action="http//www.google.com/subscribe.php">
+                <p>subscribe to our email list:</p>
+                <input type="text" name="email" />
+                <input type="image" src="image/subscribe.jpg" width="100" height="20" /><!--<input> type="image":- if you want to use an
+                image for the submit button, you can give the type attribute a value of image.-->
+             </form>
+             <hr />
+             <br />
+             <form action="http//www.example.com/add.php">
+                <button><img src="image/add.gif" alt="ADD" width="10" height="10" /></button><!--<button> this Element was introduced to allow user 
+                    more control over how their buttons appear and to allow other Elements to appear inside the button-->
+                <input type="hidden" name="bookmark" value="lyrics" /><!--input type="hidden":- this example also shows a hidden form control.-->
+            </form>
+            <hr />
+            <br />
+            <label>age: <input type="text" name="age" /></label><!--<label>:- when introducing form controls, the code was kept simple by
+                indicating the purpose of each one in text next to it. however, each form control should have its own<label>
+                    Element as this makes the form accessible to vision-impaired users.
+                
+                the <lable> Element can be used in two ways. it can:
+                    1. wrap around both the text description and the form input (as shown on the first line of the example to your right.
+                    2. Be kept seperate from the form control and use the for attribute to indicate which form control it is a label for
+                    (as shown with the radio button.)
+                     -->
+            <br />
+            Gender:
+            <input id="female" type="radio" name="gender" value="f">
+            <label for="female">female</label><!--the for Attribute states which form control the lable belongs to note how the 
+            radio buttons use the id attribute.-->
+            <input id="male" type="radio" name="gender" value="m">
+            <label for="male">male</label>
+            <hr /> 
+            <br />
+            <fieldset><!--<fieldset>:- you can group related form controls together inside the <fieldset> Element. this is 
+                particularly helpful for no longer forms.-->
+                <legend>contact details</legend><!-- the <legend> Element cam come directly after the opening <fieldset>tag and contains 
+                    a caption which helps identify the purpose of that group of form controls.-->
+                <label>Email:<br />
+                <input type="text" name="email" /></label><br />
+                <label>Mobile:<br />
+                <input type="text" name="mobile" /></label><br />
+                <label>Telephone:<br />
+                <input type="text" name="telephone" /></label>
+                
+            </fieldset>
+            <hr /> 
+            <br />
+            <form action="http//www.example.com/login/" method="post"><!--form validation in Html5-->
+                <label for="username">username:</label>
+                <input type="text" name="username" required="required" /></title><br />
+                <lable for="password">password</lable>
+                <input type="password" name="password" required="required" />
+                <input type="submit" value="submit" />
+            </form>
+            <hr />
+            <br>
+            <form action="http//www.example.com/bookins/" method="post">
+                <lable for="username">Departure date:</lable>
+                <input type="date" name="depart" /><!--<input>:- many forms need to gather information such as dates, email 
+                ,addresses,and URLs. thishas tradionally been done using text input.-->
+                <!--type="date":- if you are asking the user for a date. you can use an <input> Element and give the type attribute 
+                a value of date.-->
+                <input type="submit" value="submit" />
+            </form>
+            <hr />
+            <br />
+            <form action="http//www.example.com/subscribe.php">
+                <p>Please enter your Email address:</p>
+                <input type="email" name="email" />
+                <input type="submit" value="submit" />
+            </form>
+            <hr />
+            <br />
+            <form actions="http//www.example.org/[profile.php">
+                <p>Please Enter your website address:</p>
+                <input type="url" name="website" />
+                <input type="submit" value="submit" />
+            </form>
+            <hr />
+            <br />
+                
+            <form action="http//:www.example.org/search.php">
+            <P>
+                search:
+            </P>
+            <input type="search" name="search"
+            placeholder="enter keyword" /><!--on any text input,you can also use an attribute called placeholder-->
+            <input type="submit" value="search" /><!--type="search" :-if you want to create a single line text box for search queries 
+            HTML5 provides a special input-->
+        </form>
+        <hr />
+         <br />
+         <style>
+             #pullquote{
+                 text-transform: uppercase;
+             }
+             .imporatant{
+                 text-transform: uppercase
+                 ;
+             }
+         </style>
+         <p>
+             english is the most commonly spoken language in the world one at of people can speak or at least understand english.</p>
+             <p id="pullquote">studying English can help you get a job:- English is the language science aviation,
+                  computers and tourisms knowing english
+             increases your chances of getting a good job in a multinational company within your home country or of 
+             finding work abroad.</p>
+            <P>many scientific papers are written in English:-the Number of scientific papers written in English has started 
+                to outweigh the number of paper written in the native language of the researcher.  
+         </p>
+         <hr />
+
+         <p class="important ">
+             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe soluta omnis quae molestias totam nihil 
+             numquam dolores aut aliquid
+              consequuntur ut quas deserunt culpa, asperiores inventore? Consequuntur reprehenderit pariatur tenetur.
+              <P>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                   Suscipit totam, modi quia vero odit corrupti inventore delectus impedit,
+                   obcaecati cumque repudiandae sapiente earum, expedita dolores eos molestias? Repellendus, similique sunt!
+              </P>
+              <p class="impotant admittance">Hours: 10:10 - 18:00 (no admittance after 17:30)</p>
+         </p>
+         <hr /> 
+         <br />
+         <h1>this is a main heading</h1>
+         <p>
+             sports equipment.
+         </p>
+         <ul>
+             <li>cricket bat: 5 pair </li>
+             <li>session ball: 10</li>
+             <li>keeper gloves: 5pair</li>
+             <li>hockey stick:10</li>
+         </ul>
+         <hr />
+         <br />
+         <div id="header">
+             <img src="tutorial.jpg" width="480" height="320" alt="TUTORIAL POINTS" />
+             <ul>
+                 <li><a href="index.html">HOME</a></li>
+                 <li><a href="HTML5.html">HTML</li>
+                    <li><a href="CSS3.HTML">CSS3</a></li>
+                    <li><a href="JAVA SCRIPT.HTML">JAVA SCRIPT</a></li>
+             </ul>
+         </div><!--end of header-->
+         <hr />
+         <br />
+         <p>anish kapoor won the turner prize in 1991 and exhibited at the <span class="gallery">
+                 Tate modern</span> 
+                 gallery in london in 2003.</p>
+                 <hr />
+                 <br />
+                 <iframe 
+                 width="480"
+                 height="380"
+                 src="gulf country.jpg" &amp:output="embed">
+                 
+                </iframe>
+                 
 
 
     
